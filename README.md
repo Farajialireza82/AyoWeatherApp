@@ -1,5 +1,5 @@
 # AYO WEATHER CHECK!!!
-A simple weather app to help me practice all the diffrent libraries and framworks in the android development field.
+A potentially amazing weather app powered by [Open-Meteo](https://open-meteo.com/) to help me practice all the diffrent libraries and framworks in the android development world.
 
 ## Libraries used at the moment
 * Retrofit
