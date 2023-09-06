@@ -12,5 +12,4 @@ A potentially amazing weather app powered by [Open-Meteo](https://open-meteo.com
 ## Libraries coming to the project
   * Ktor
   * Room
-
   * And a lot more to come....
