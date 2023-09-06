@@ -1,7 +1,7 @@
 # AYO WEATHER CHECK!!!
 A potentially amazing weather app powered by [Open-Meteo](https://open-meteo.com/) to help me practice all the diffrent libraries and framworks in the android development world.
 
-## Libraries used at the moment
+## Libraries used so far
 * Retrofit
 * Jetpack Compose
 * Dagger Hilt
