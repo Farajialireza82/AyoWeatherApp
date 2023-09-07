@@ -14,6 +14,7 @@ import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
@@ -46,7 +47,7 @@ fun WeatherCard(
             ) {
                 Text(
                     text = "Today ${
-                        data.time.format(
+                        data.exactDeviceTime.format(
                             DateTimeFormatter.ofPattern("HH:mm")
                         )
                     }",
@@ -54,23 +55,30 @@ fun WeatherCard(
                     color = White
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                Image(
-                    painter = painterResource(id = data.weatherType.iconRes),
-                    contentDescription = data.weatherType.weatherDesc,
-                    modifier = Modifier.width(200.dp)
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(
-                    text = "${data.temperatureCelsius}°C",
-                    fontSize = 50.sp,
-                    color = White
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(
-                    text = data.weatherType.weatherDesc,
-                    fontSize = 20.sp,
-                    color = White
-                )
+                Column(
+                    modifier = Modifier.align(CenterHorizontally)
+                ) {
+                    Image(
+                        painter = painterResource(id = data.weatherType.iconRes),
+                        contentDescription = data.weatherType.weatherDesc,
+                        modifier = Modifier.width(200.dp)
+                            .align(CenterHorizontally)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "${data.temperatureCelsius}°C",
+                        fontSize = 50.sp,
+                        color = White,
+                        modifier = Modifier.align(CenterHorizontally)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = data.weatherType.weatherDesc,
+                        fontSize = 20.sp,
+                        color = White,
+                        modifier = Modifier.align(CenterHorizontally)
+                    )
+                }
                 Spacer(modifier = Modifier.height(32.dp))
 
                 Row (
